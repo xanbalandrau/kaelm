@@ -1,0 +1,73 @@
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 1000;
+  animation: lightboxOpen 0.5s;
+  transition: opacity 0.3s;
+}
+/* animation pour fermer */
+.lightbox.close {
+  opacity: 0;
+}
+/* bouttons de la lightbox */
+.lightbox_next,
+.lightbox_prev,
+.lightbox_close {
+  height: 100%;
+  width: 5vw;
+  padding: 0.1em;
+  border: none;
+  color: white;
+  background-color: rgb(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.lightbox_next i,
+.lightbox_prev i,
+.lightbox_close i {
+  font-size: 1.5em;
+}
+.lightbox_prev {
+  right: auto;
+  left: 0;
+}
+.lightbox_close {
+  height: auto;
+  left: auto;
+  top: 60px;
+  right: 100px;
+}
+.lightbox_next:hover,
+.lightbox_prev:hover,
+.lightbox_close:hover {
+  opacity: 1;
+}
+/* conteneur de la lightbox */
+.lightbox_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px;
+  min-height: 100%;
+}
+.lightbox_container img {
+  max-width: 100%;
+  height: 100vh;
+}
+@keyframes lightboxOpen {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

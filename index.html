@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <title>Kaëlm Design</title>
+  </head>
+  <body>
+    <header id="navBar">
+      <!-- menu burger -->
+      <div id="menuBurger" class="menuBurger">
+        <a
+          id="navBar_menuBurger_icon"
+          aria-label="menu burger"
+          href="javascript:void(0);"
+          onclick="ouvertureMenuBurger()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav role="navigation" id="navBar_menuBurger">
+          <ul>
+            <li>
+              <a href="#"><small>1.</small> Accueil</a>
+            </li>
+            <li>
+              <a href="./templates/portfolio.html"
+                ><small>2.</small> Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="./templates/contact.html"><small>3.</small> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Scroll bar -->
+    <section class="scroll-bar">
+      <div class="wrapper">
+        <div class="itemLeft" style="--i: 0">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-17.jpg"
+            alt="La Joconde en rond"
+          />
+        </div>
+        <div class="itemLeft" style="--i: 1">
+          <img src="./asset/img/link kalm.png" alt="link rond" />
+        </div>
+        <div class="itemLeft" style="--i: 2">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G98.jpg"
+            alt="harry potter rond"
+          />
+        </div>
+        <div class="itemLeft" style="--i: 3">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-DD.jpeg"
+            alt="La reine Élisabeth II et ses corgis rond"
+          />
+        </div>
+        <div class="itemLeft" style="--i: 4">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-0.jpg"
+            alt="Les Simpson rond"
+          />
+        </div>
+        <div class="itemLeft" style="--i: 5">
+          <img
+            src="./asset/img/sign-ronds-personnages-oeuvres-celebres-HG2.jpg"
+            alt="Nosferapto rond"
+          />
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="itemRight" style="--i: 0">
+          <img src="./asset/img/hulk.png" alt="hulk rond" />
+        </div>
+        <div class="itemRight" style="--i: 1">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-13.jpg"
+            alt="La Jeune Fille à la perle rond"
+          />
+        </div>
+        <div class="itemRight" style="--i: 2">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-11.jpg"
+            alt="Dracofeu rond"
+          />
+        </div>
+        <div class="itemRight" style="--i: 3">
+          <img src="/asset/img/katarina kalm.png" alt="katarina rond" />
+        </div>
+        <div class="itemRight" style="--i: 4">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-7.jpg"
+            alt="garnica rond"
+          />
+        </div>
+        <div class="itemRight" style="--i: 5">
+          <img
+            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G87.jpg"
+            alt="hermione rond"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation">
+      <div class="presentation-text">
+        <h1>Kaëlem Design</h1>
+        <p>
+          Bienvenue sur le site de KAELEM DESIGN, je suis un graphiste français
+          passionné par l’art et les formes géométriques. Mon univers créatif
+          repose sur une idée simple mais audacieuse : réinventer des œuvres
+          iconiques et des personnages célèbres uniquement à travers des
+          cercles.
+        </p>
+        <br />
+        <p>
+          Sur mon compte Instagram, où je partage mes créations avec près de
+          1000 abonnés, vous découvrirez des réinterprétations uniques de
+          chefs-d’œuvre comme La Joconde ou La Jeune Fille à la Perle. Chaque
+          dessin est un véritable jeu de construction, où je m’efforce de
+          capturer l’essence de l’original tout en lui donnant une touche
+          moderne et ludique grâce à mes "coup de crayons circulaires".
+        </p>
+        <br />
+        <p>
+          Ma passion ne s’arrête pas là : étant un grand fan de Pokémon, j’ai
+          également créé une série complète des créatures de cet univers,
+          toujours dans ce style rond et minimaliste. Le résultat ? Des œuvres
+          graphiques épurées mais immédiatement reconnaissables, qui plaisent
+          autant aux amateurs d’art qu’aux fans de pop culture.
+        </p>
+        <br />
+        <p>
+          Si mes créations vous parlent, sachez que je propose aussi des
+          impressions à la vente pour que vous puissiez les intégrer à votre
+          propre univers. Vous pouvez retrouver l’ensemble de mon travail et
+          suivre mes projets sur Instagram. J’espère que mon approche vous
+          séduira autant que j’ai pris plaisir à la développer !
+        </p>
+      </div>
+      <aside>
+        <img src="./asset/img/logo kalm.png" alt="logo de Kaelm Design" />
+      </aside>
+    </section>
+    <footer>
+      <div class="share">
+        <button
+          class="toggle"
+          onclick="toggleAcitve()"
+          aria-label="button share"
+        >
+          <i class="fa fa-share-alt"></i>
+        </button>
+        <li style="--s: 0; --color: #c32aa3">
+          <a
+            href="https://www.instagram.com/kaelem_design/"
+            aria-label="link insta"
+            target="_blank"
+            ><i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li style="--s: 1; --color: #ff0000">
+          <a
+            href="https://www.youtube.com/"
+            aria-label="link youtube"
+            target="_blank"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li style="--s: 2; --color: #1877f2">
+          <a
+            href="https://www.facebook.com/?locale=fr_FR"
+            aria-label="link facebook"
+            target="_blank"
+            ><i class="fa fa-facebook-official" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li style="--s: 3; --color: #25d366">
+          <a
+            href="https://web.whatsapp.com/"
+            aria-label="link whatsapp"
+            target="_blank"
+            ><i class="fa fa-whatsapp" aria-hidden="true"></i
+          ></a>
+        </li>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/a28e257516.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./asset/js/scipt.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <title>Kaëlem Design - Contact</title>
+  </head>
+  <body>
+    <header id="navBar">
+      <!-- menu burger -->
+      <div id="menuBurger" class="menuBurger">
+        <a
+          id="navBar_menuBurger_icon"
+          aria-label="menu burger"
+          href="javascript:void(0);"
+          onclick="ouvertureMenuBurger()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav role="navigation" id="navBar_menuBurger">
+          <ul>
+            <li>
+              <a href="../index.html"><small>1.</small> Accueil</a>
+            </li>
+            <li>
+              <a href="./portfolio.html"><small>2.</small> Portfolio</a>
+            </li>
+            <li>
+              <a href="#"><small>3.</small> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="logo">
+      <img src="../asset/img/logo kalm.png" alt="logo" />
+      <h1 style="margin-bottom: 0">Kaëlem Design</h1>
+    </section>
+    <h2 class="contact">Me contacter</h2>
+    <section style="display: flex">
+      <form id="formContact">
+        <p class="error"></p>
+        <div style="display: flex; justify-content: space-between">
+          <div class="identite">
+            <label for="nom">Nom (requis)</label>
+            <input type="text" id="nom" placeholder="Entrez votre nom" />
+          </div>
+          <div class="identite">
+            <label for="prenom">Prénom (requis)</label>
+            <input type="text" id="prenom" placeholder="Entrez votre prénom" />
+          </div>
+        </div>
+        <label for="email">Email (requis)</label>
+        <input type="email" id="email" placeholder="Entrez votre email" />
+
+        <label for="sujet">Sujet (requis)</label>
+        <input type="text" id="sujet" placeholder="Raison de votre contact" />
+
+        <label for="message">Message (requis)</label>
+        <textarea id="message" maxlength="500"></textarea>
+        <div id="compteur">0/500</div>
+
+        <button type="submit">Envoyer</button>
+      </form>
+      <aside>
+        <p class="text">
+          Veuillez m'envoyer une message sur
+          <a
+            href="https://www.instagram.com/kaelem_design/"
+            target="_blank"
+            style="text-decoration: none; color: black; font-weight: bold"
+            >Instagram</a
+          >
+          ou remplir le formulaire pour demander un devis pour un projet, vous
+          renseigner sur une collaboration ou simplement dire bonjour. Je suis
+          également heureux de vous référer à quelqu'un d'autre pour un besoin
+          spécifique en matière de projet ! J'aime connecter les gens.
+        </p>
+      </aside>
+    </section>
+
+    <script src="../asset/js/contact.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/a28e257516.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../asset/js/scipt.js"></script>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+/* Init du site web */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+/* Déclaration de mes variables pour la couleur */
+body {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --third-color: #ff4500;
+  background: linear-gradient(125deg, #ffe9e2, #fff0ea);
+}
+/* ******************** Menu Burger *********************/
+#navBar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  z-index: 100;
+  width: 5vw;
+  height: 5vw;
+  background-color: var(--secondary-color);
+}
+/*l'animation quand la souris vient */
+#navBar:hover {
+  scale: 1.06;
+  transition: 0.3s ease;
+}
+/*l'animation quand la souris quitte */
+#navBar:not(:hover) {
+  scale: 1;
+  transition: 0.3s ease;
+}
+/* div du menu Burger */
+.menuBurger {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1rem 0;
+  height: 1rem;
+}
+/* fenetre du menu bruger */
+#navBar_menuBurger ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45vw;
+  height: 100vh;
+  background-color: var(--third-color);
+}
+/* lien du menu burger */
+#navBar_menuBurger li {
+  margin: 15vh 0 0 5vw;
+}
+#navBar_menuBurger a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration-line: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* navbar du menu burger */
+#navBar_menuBurger {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(200%, 0); /* pour cacher le menu à droite*/
+  transition: transform 0.5s ease-out;
+}
+/* icone du burger */
+#navBar_menuBurger_icon {
+  display: block;
+  position: relative;
+  width: 5vh;
+  margin: 1rem 1rem 0 0;
+  user-select: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+#navBar_menuBurger_icon span {
+  display: block;
+  z-index: 1000;
+  width: 100%;
+  height: 0.8vh;
+  margin-bottom: 0.8vh;
+  border-radius: 5px;
+  background-color: var(--third-color);
+}
+/* pour faire apparaitre le menu */
+#navBar_menuBurger.open {
+  transform: none;
+}
+/* pour changer l'icone burger en icone croix */
+#navBar_menuBurger_icon.open span {
+  position: absolute;
+  height: 0.7vh;
+  transition: 0.5s;
+  background-color: black;
+}
+#navBar_menuBurger_icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+#navBar_menuBurger_icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+#navBar_menuBurger_icon.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+/* ******************** FIN Menu Burger ******************** */
+/* ******************** Header scroll ******************** */
+.scroll-bar {
+  padding-top: 2rem;
+  background-color: var(--secondary-color);
+}
+/* les bandes de scroll */
+.wrapper {
+  width: 90vw;
+  height: 25vh;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+/* animation du scroll */
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+/* Items qui défilent */
+.itemLeft,
+.itemRight {
+  width: 200px;
+  height: 150px;
+  border-radius: 1em;
+  background-color: var(--third-color);
+  text-align: center;
+  position: absolute;
+  animation: scroll 30s linear infinite;
+  animation-delay: calc(30s / 6 * var(--i) * -1);
+}
+/* mettre du décalage entre items */
+.itemLeft {
+  left: max(calc(100px * 6), 100%);
+  animation-name: scrollLeft;
+}
+.itemRight {
+  right: max(calc(100px * 6), 100%);
+  animation-name: scrollRight;
+}
+/* dimension des images */
+.wrapper img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+}
+/* ********************  FIN Header scroll ******************** */
+/* ********************  Présentation ******************** */
+.presentation {
+  display: flex;
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  color: var(--third-color);
+}
+.presentation-text {
+  text-align: justify;
+  margin: 3rem;
+}
+.presentation aside {
+  padding: auto;
+  background-color: #de5656;
+}
+/* ********************  Footer ******************** */
+footer {
+  position: absolute;
+  top: 140vh;
+  right: 12vw;
+}
+/* boutton share */
+.share {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.share .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px;
+  color: rgb(24, 24, 24);
+  cursor: pointer;
+  font-size: 2em;
+  transition: 1s;
+}
+/* les élements de share */
+.share li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.5s;
+  transform: rotate(calc(360deg / 4 * var(--s)));
+  transform-origin: 125px;
+  scale: 0;
+  transition-delay: calc(0.07s * var(--s));
+}
+/* liens de share */
+.share li a {
+  text-decoration-line: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  transform: rotate(calc(360deg / -4 * var(--s)));
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 2em;
+  color: var(--color);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+/* Survol des liens */
+.share li:hover a {
+  font-size: 2.5em;
+  box-shadow: 0 0 0 2px var(--color), 0 0 0 6px white;
+}
+/* Animation de share */
+.share.active .toggle {
+  transform: rotate(360deg);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px #333, 0 0 0 10px white;
+}
+/* Apparition des éléments de partage */
+.share.active li {
+  scale: 1;
+}
+/* ********************  Page Contact ******************** */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+}
+.logo img {
+  margin: 1em;
+  margin-bottom: 0;
+  width: 20%;
+  border-radius: 50%;
+}
+/* titre de la page */
+.contact {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: 3em;
+}
+/* input nom et prenom */
+.identite {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+/* input du formulaire */
+form input,
+textarea {
+  margin-bottom: 0.2em;
+}
+/* label du formulaire */
+form label {
+  margin: 0.5em;
+}
+/* bouton submit */
+form button {
+  width: 20vw;
+  background-color: var(--third-color);
+  margin: 1rem 0;
+}
+/* compteur */
+#compteur {
+  font-size: 0.5em;
+  width: 50vw;
+  text-align: end;
+}
+/* Message erreur */
+.error {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+.envoye {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+/* texte aside */
+.text {
+  width: 30vw;
+  text-align: justify;
+  margin: 3rem 0 0 5rem;
+}
+/* ********************  Page Portfolio ******************** */
+.galerie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+.galerie a {
+  height: 200px;
+  margin: 0.5em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.galerie img,
+#video {
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.galerie img:hover,
+#video:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+/* pour les grands tableau */
+.grand {
+  height: 400px !important;
+  margin: 0.4em 1.1em !important;
+}
+/* Les 3 images de fin */
+.arcane {
+  margin-top: 1.2em !important;
+  filter: saturate(0.1);
+  transition: 1s;
+}
+.arcane:hover {
+  filter: none;
+  scale: 1.2;
+  transition: all 1.3s ease;
+}
