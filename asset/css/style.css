@@ -208,7 +208,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .share .toggle {
   display: flex;
@@ -378,4 +377,323 @@ form button {
   filter: none;
   scale: 1.2;
   transition: all 1.3s ease;
+}
+/* **************************************** Responsive pour Tablette *****************************************/
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  * {
+    font-size: 1rem;
+  }
+  /* ******************** Menu Burger *********************/
+  #navBar {
+    top: 10px;
+    right: 10px;
+    width: 10vw;
+    height: 10vw;
+  }
+  /* icone du burger */
+  #navBar_menuBurger_icon {
+    width: 4vh;
+    margin: 2.8rem 1.2rem 0 0;
+  }
+  /* pour changer l'icone burger en icone croix */
+  #navBar_menuBurger_icon.open span {
+    height: 0.7vh;
+  }
+  /* ******************** FIN Menu Burger ******************** */
+  /* ******************** Header scroll ******************** */
+  .scroll-bar {
+    padding-top: 2rem;
+  }
+  /* les bandes de scroll */
+  .wrapper {
+    width: 90vw;
+    height: 20vh;
+  }
+  /* Items qui défilent */
+  .itemLeft,
+  .itemRight {
+    width: 150px;
+    height: 150px;
+  }
+  /* ********************  FIN Header scroll ******************** */
+  /* ********************  Présentation ******************** */
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .presentation-text {
+    margin: 1rem;
+  }
+  .presentation aside {
+    width: 150%;
+  }
+  aside img {
+    width: 100%;
+  }
+  /* ********************  Footer ******************** */
+  footer {
+    top: 65vh;
+    right: 2vw;
+  }
+  /* boutton share */
+  .share {
+    width: 200px;
+    height: 200px;
+  }
+  .share .toggle {
+    width: 60px;
+    height: 60px;
+    font-size: 3em;
+  }
+  /* les élements de share */
+  .share li {
+    left: 0;
+    transform-origin: 100px;
+  }
+  /* liens de share */
+  .share li a {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+  /* ********************  Page Contact ******************** */
+  .logo {
+    width: 50vw;
+  }
+  .logo img {
+    margin: 1em;
+    margin-bottom: 0;
+    width: 20%;
+  }
+  .responsive-contact {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  /* titre de la page */
+  .contact {
+    font-size: 1.7rem;
+    margin: 4rem;
+  }
+  /* formulaire */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-top: 5rem;
+  }
+  /* input nom et prenom */
+  .identite {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+  }
+  /* input du formulaire */
+  form input,
+  textarea {
+    padding: 1rem;
+    margin-bottom: 0.2em;
+  }
+  /* label du formulaire */
+  form label {
+    margin: 0.5em;
+  }
+  /* bouton submit */
+  form button {
+    padding: 0.5rem;
+    width: 30vw;
+    margin: 1rem 0;
+  }
+  /* compteur */
+  #compteur {
+    font-size: 0.5em;
+    width: 60vw;
+  }
+  /* texte aside */
+  .text {
+    width: 50vw;
+    text-align: justify;
+    margin: auto;
+  }
+  /* ********************  Page Portfolio ******************** */
+  .galerie {
+    margin: 2em;
+  }
+  .galerie a {
+    height: 200px;
+    margin: 0.5em;
+  }
+  /* pour les grands tableau */
+  .grand {
+    height: 400px !important;
+    margin: 0.4em 5em !important;
+  }
+  /* Les 3 images de fin */
+  .arcane {
+    filter: saturate(1);
+  }
+}
+/* **************************************** Responsive pour Mobile *****************************************/
+@media screen and (max-width: 767px) {
+  * {
+    font-size: 1rem;
+  }
+  /* ******************** Menu Burger *********************/
+  #navBar {
+    top: 10px;
+    right: 10px;
+    width: 15vw;
+    height: 15vw;
+  }
+  /* fenetre du menu bruger */
+  #navBar_menuBurger ul {
+    width: 65vw;
+  }
+  /* icone du burger */
+  #navBar_menuBurger_icon {
+    width: 3vh;
+    margin: 1rem 1rem 0 0;
+  }
+  /* pour changer l'icone burger en icone croix */
+  #navBar_menuBurger_icon.open span {
+    height: 0.7vh;
+  }
+  /* ******************** FIN Menu Burger ******************** */
+  /* ******************** Header scroll ******************** */
+  .scroll-bar {
+    padding-top: 2rem;
+  }
+  /* les bandes de scroll */
+  .wrapper {
+    width: 90vw;
+    height: 15vh;
+  }
+  /* Items qui défilent */
+  .itemLeft,
+  .itemRight {
+    width: 120px;
+    height: 100px;
+  }
+  /* ********************  FIN Header scroll ******************** */
+  /* ********************  Présentation ******************** */
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .presentation {
+    flex-direction: column;
+  }
+  .presentation-text {
+    margin: 1rem;
+  }
+  .presentation aside {
+    width: 100vw;
+    padding-bottom: 20vh;
+  }
+  aside img {
+    width: 100%;
+  }
+  /* ********************  Footer ******************** */
+  footer {
+    top: 150vh;
+    right: 22vw;
+  }
+  /* boutton share */
+  .share {
+    width: 200px;
+    height: 200px;
+  }
+  .share .toggle {
+    width: 60px;
+    height: 60px;
+    font-size: 3em;
+  }
+  /* les élements de share */
+  .share li {
+    left: 0;
+    transform-origin: 100px;
+  }
+  /* liens de share */
+  .share li a {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+  /* ********************  Page Contact ******************** */
+  .logo {
+    width: 50vw;
+  }
+  .logo img {
+    margin: 1em;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .responsive-contact {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  /* titre de la page */
+  .contact {
+    font-size: 1.7rem;
+    margin: 2rem;
+  }
+  /* formulaire */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+  }
+  /* input nom et prenom */
+  .identite {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+  }
+  /* input du formulaire */
+  form input,
+  textarea {
+    padding: 1rem;
+    margin-bottom: 0.2em;
+  }
+  /* label du formulaire */
+  form label {
+    margin: 0.5em;
+  }
+  /* bouton submit */
+  form button {
+    padding: 0.5rem;
+    width: 30vw;
+    margin: 1rem 0;
+  }
+  /* compteur */
+  #compteur {
+    font-size: 0.5em;
+    width: 80vw;
+  }
+  /* texte aside */
+  .text {
+    width: 80vw;
+    text-align: justify;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  /* ********************  Page Portfolio ******************** */
+  .galerie {
+    margin: 2em;
+  }
+  .galerie a,.grand {
+    height: 200px;
+    margin: 0.5em;
+  }
+  /* pour les grands tableau */
+  .grand {
+    height: 200px !important;
+    margin: 0.5em ;
+  }
+  /* Les 3 images de fin */
+  .arcane {
+    filter: saturate(1);
+  }
 }
