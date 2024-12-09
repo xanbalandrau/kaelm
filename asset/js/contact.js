@@ -7,7 +7,7 @@ document.getElementById("formContact").addEventListener("submit", (e) => {
   const sujet = document.getElementById("sujet").value.trim();
   const message = document.getElementById("message").value.trim();
   const erreur = document.querySelector(".error");
-  // Réinitialiser les message erreur
+  // Réinitialiser le message erreur
   erreur.innerHTML = "";
   switch (true) {
     case nom === "":

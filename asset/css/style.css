@@ -1,39 +1,47 @@
 /* Init du site web */
+/* Supprime les marges et les paddings par défaut des éléments */
 * {
   margin: 0;
   padding: 0;
   font-size: 1.3rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif; /* Définit une police par défaut */
 }
-/* Déclaration de mes variables pour la couleur */
+
+/* Déclaration des variables pour les couleurs et le fond de la page */
 body {
-  --primary-color: #ffffff;
-  --secondary-color: #000000;
-  --third-color: #ff4500;
-  background: linear-gradient(125deg, #ffe9e2, #fff0ea);
+  --primary-color: #ffffff; /* Couleur principale */
+  --secondary-color: #000000; /* Couleur secondaire */
+  --third-color: #ff4500; /* Couleur tertiaire (orange vif) */
+  background: linear-gradient(125deg, #ffe9e2, #fff0ea); /* Fond en dégradé */
 }
-/* ******************** Menu Burger *********************/
+
+/* *************** Menu Burger *************** */
+
+/* Bouton circulaire du menu burger */
 #navBar {
   position: fixed;
-  top: 10px;
+  top: 10px; /* Position en haut à droite */
   right: 10px;
-  border-radius: 50%;
-  z-index: 100;
+  border-radius: 50%; /* Forme circulaire */
+  z-index: 100; /* Priorité d'affichage */
   width: 5vw;
   height: 5vw;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); /* Couleur de fond */
 }
-/*l'animation quand la souris vient */
+
+/* Animation du bouton au survol */
 #navBar:hover {
-  scale: 1.06;
-  transition: 0.3s ease;
+  scale: 1.06; /* Agrandissement */
+  transition: 0.3s ease; /* Transition fluide */
 }
-/*l'animation quand la souris quitte */
+
+/* Animation quand la souris quitte */
 #navBar:not(:hover) {
-  scale: 1;
+  scale: 1; /* Retour à la taille normale */
   transition: 0.3s ease;
 }
-/* div du menu Burger */
+
+/* Contenu du menu burger aligné à droite */
 .menuBurger {
   display: flex;
   justify-content: end;
@@ -41,30 +49,33 @@ body {
   padding: 1rem 0;
   height: 1rem;
 }
-/* fenetre du menu bruger */
+
+/* Fenêtre du menu burger */
 #navBar_menuBurger ul {
   display: flex;
-  flex-direction: column;
-  list-style-type: none;
+  flex-direction: column; /* Les éléments sont alignés verticalement */
+  list-style-type: none; /* Supprime les puces */
   position: absolute;
   top: 0;
   right: 0;
-  width: 45vw;
-  height: 100vh;
-  background-color: var(--third-color);
+  width: 45vw; /* Largeur de la fenêtre */
+  height: 100vh; /* Hauteur complète de l'écran */
+  background-color: var(--third-color); /* Fond orange */
 }
-/* lien du menu burger */
+
+/* Liens du menu burger */
 #navBar_menuBurger li {
-  margin: 15vh 0 0 5vw;
+  margin: 15vh 0 0 5vw; /* Espacement vertical entre les items */
 }
 #navBar_menuBurger a {
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration-line: none;
+  font-size: 2rem; /* Taille de la police */
+  font-weight: 700; /* Texte en gras */
+  text-decoration-line: none; /* Supprime le soulignement */
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Police spécifique */
 }
-/* navbar du menu burger */
+
+/* Conteneur global du menu burger (masqué par défaut) */
 #navBar_menuBurger {
   display: block;
   position: absolute;
@@ -72,39 +83,45 @@ body {
   right: -10px;
   width: 100vw;
   height: 100vh;
-  transform: translate(200%, 0); /* pour cacher le menu à droite*/
-  transition: transform 0.5s ease-out;
+  transform: translate(200%, 0); /* Cache le menu hors de l'écran */
+  transition: transform 0.5s ease-out; /* Transition fluide pour afficher/masquer */
 }
-/* icone du burger */
+
+/* Icône du burger */
 #navBar_menuBurger_icon {
   display: block;
   position: relative;
   width: 5vh;
   margin: 1rem 1rem 0 0;
-  user-select: none;
-  cursor: pointer;
-  -webkit-user-select: none;
+  user-select: none; /* Empêche la sélection de l'élément */
+  cursor: pointer; /* Curseur clic */
 }
+
+/* Barres du menu burger */
 #navBar_menuBurger_icon span {
   display: block;
   z-index: 1000;
   width: 100%;
   height: 0.8vh;
   margin-bottom: 0.8vh;
-  border-radius: 5px;
-  background-color: var(--third-color);
+  border-radius: 5px; /* Coins arrondis */
+  background-color: var(--third-color); /* Couleur orange */
 }
-/* pour faire apparaitre le menu */
+
+/* Menu burger ouvert */
 #navBar_menuBurger.open {
-  transform: none;
+  transform: none; /* Position initiale visible */
 }
-/* pour changer l'icone burger en icone croix */
+
+/* Transition de l'icône burger vers une croix */
 #navBar_menuBurger_icon.open span {
   position: absolute;
   height: 0.7vh;
   transition: 0.5s;
   background-color: black;
 }
+
+/* Transformation des barres lors de l'ouverture */
 #navBar_menuBurger_icon.open span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -112,31 +129,37 @@ body {
   transform: rotate(-45deg);
 }
 #navBar_menuBurger_icon.open span:nth-child(2) {
-  width: 0;
+  width: 0; /* Masque la barre centrale */
   opacity: 0;
 }
-/* ******************** FIN Menu Burger ******************** */
-/* ******************** Header scroll ******************** */
+
+/* *************** FIN Menu Burger *************** */
+
+/* *************** Header scroll *************** */
+
+/* Section de la barre de scroll */
 .scroll-bar {
   padding-top: 2rem;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); /* Fond noir */
 }
-/* les bandes de scroll */
+
+/* Conteneur masquant les éléments défilants */
 .wrapper {
   width: 90vw;
   height: 25vh;
   margin: auto;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Masque les éléments hors cadre */
   mask-image: linear-gradient(
     to right,
     transparent,
     black 20%,
     black 80%,
     transparent
-  );
+  ); /* Effet de dégradé pour masquer les extrémités */
 }
-/* animation du scroll */
+
+/* Animations pour faire défiler les items */
 @keyframes scrollLeft {
   to {
     left: -200px;
@@ -147,7 +170,8 @@ body {
     right: -200px;
   }
 }
-/* Items qui défilent */
+
+/* Propriétés des items défilants */
 .itemLeft,
 .itemRight {
   width: 200px;
@@ -156,27 +180,34 @@ body {
   background-color: var(--third-color);
   text-align: center;
   position: absolute;
-  animation: scroll 30s linear infinite;
-  animation-delay: calc(30s / 6 * var(--i) * -1);
+  animation: scroll 30s linear infinite; /* Animation infinie */
+  animation-delay: calc(30s / 6 * var(--i) * -1); /* Décalage entre items */
 }
-/* mettre du décalage entre items */
+
+/* Les items défilent vers la gauche */
 .itemLeft {
   left: max(calc(100px * 6), 100%);
   animation-name: scrollLeft;
 }
+
+/* Les items défilent vers la droite */
 .itemRight {
   right: max(calc(100px * 6), 100%);
   animation-name: scrollRight;
 }
-/* dimension des images */
+
+/* Images dans le scroll */
 .wrapper img {
   height: 100%;
   width: 100%;
   border-radius: 1em;
-  object-fit: cover;
+  object-fit: cover; /* Remplissage sans déformation */
 }
-/* ********************  FIN Header scroll ******************** */
-/* ********************  Présentation ******************** */
+
+/* *************** FIN Header scroll *************** */
+
+/* *************** Présentation *************** */
+
 .presentation {
   display: flex;
 }
@@ -184,7 +215,7 @@ h1 {
   font-size: 2rem;
   text-align: center;
   margin: 1rem 0 2rem 0;
-  color: var(--third-color);
+  color: var(--third-color); /* Couleur orange */
 }
 .presentation-text {
   text-align: justify;
@@ -195,6 +226,7 @@ h1 {
   background-color: #de5656;
 }
 /* ********************  Footer ******************** */
+/* Position du footer */
 footer {
   position: absolute;
   top: 140vh;
@@ -683,14 +715,15 @@ form button {
   .galerie {
     margin: 2em;
   }
-  .galerie a,.grand {
+  .galerie a,
+  .grand {
     height: 200px;
     margin: 0.5em;
   }
   /* pour les grands tableau */
   .grand {
     height: 200px !important;
-    margin: 0.5em ;
+    margin: 0.5em;
   }
   /* Les 3 images de fin */
   .arcane {
