@@ -4,15 +4,15 @@
   margin: 0;
   padding: 0;
   font-size: 1.3rem;
-  font-family: "Times New Roman", Times, serif; /* Définit une police par défaut */
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Déclaration des variables pour les couleurs et le fond de la page */
 body {
-  --primary-color: #ffffff; /* Couleur principale */
-  --secondary-color: #000000; /* Couleur secondaire */
-  --third-color: #ff4500; /* Couleur tertiaire (orange vif) */
-  background: linear-gradient(125deg, #ffe9e2, #fff0ea); /* Fond en dégradé */
+  --primary-color: #ffffff;
+  --secondary-color: #000000; 
+  --third-color: #ff4500; 
+  background: linear-gradient(125deg, #ffe9e2, #fff0ea); 
 }
 
 /* *************** Menu Burger *************** */
@@ -20,24 +20,24 @@ body {
 /* Bouton circulaire du menu burger */
 #navBar {
   position: fixed;
-  top: 10px; /* Position en haut à droite */
+  top: 10px;
   right: 10px;
-  border-radius: 50%; /* Forme circulaire */
-  z-index: 100; /* Priorité d'affichage */
+  border-radius: 50%;
+  z-index: 100; 
   width: 5vw;
   height: 5vw;
-  background-color: var(--secondary-color); /* Couleur de fond */
+  background-color: var(--secondary-color); 
 }
 
 /* Animation du bouton au survol */
 #navBar:hover {
-  scale: 1.06; /* Agrandissement */
-  transition: 0.3s ease; /* Transition fluide */
+  scale: 1.06;
+  transition: 0.3s ease; 
 }
 
 /* Animation quand la souris quitte */
 #navBar:not(:hover) {
-  scale: 1; /* Retour à la taille normale */
+  scale: 1; 
   transition: 0.3s ease;
 }
 
@@ -53,26 +53,26 @@ body {
 /* Fenêtre du menu burger */
 #navBar_menuBurger ul {
   display: flex;
-  flex-direction: column; /* Les éléments sont alignés verticalement */
-  list-style-type: none; /* Supprime les puces */
+  flex-direction: column; 
+  list-style-type: none; 
   position: absolute;
   top: 0;
   right: 0;
-  width: 45vw; /* Largeur de la fenêtre */
-  height: 100vh; /* Hauteur complète de l'écran */
-  background-color: var(--third-color); /* Fond orange */
+  width: 30vw;
+  height: 100vh; 
+  background-color: var(--third-color); 
 }
 
 /* Liens du menu burger */
 #navBar_menuBurger li {
-  margin: 15vh 0 0 5vw; /* Espacement vertical entre les items */
+  margin: 15vh 0 0 5vw; 
 }
 #navBar_menuBurger a {
-  font-size: 2rem; /* Taille de la police */
-  font-weight: 700; /* Texte en gras */
-  text-decoration-line: none; /* Supprime le soulignement */
+  font-size: 2rem;
+  font-weight: 700; 
+  text-decoration-line: none; 
   color: white;
-  font-family: Arial, Helvetica, sans-serif; /* Police spécifique */
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
 /* Conteneur global du menu burger (masqué par défaut) */
@@ -83,8 +83,8 @@ body {
   right: -10px;
   width: 100vw;
   height: 100vh;
-  transform: translate(200%, 0); /* Cache le menu hors de l'écran */
-  transition: transform 0.5s ease-out; /* Transition fluide pour afficher/masquer */
+  transform: translate(200%, 0);
+  transition: transform 0.5s ease-out; 
 }
 
 /* Icône du burger */
@@ -93,8 +93,8 @@ body {
   position: relative;
   width: 5vh;
   margin: 1rem 1rem 0 0;
-  user-select: none; /* Empêche la sélection de l'élément */
-  cursor: pointer; /* Curseur clic */
+  user-select: none;
+  cursor: pointer; 
 }
 
 /* Barres du menu burger */
@@ -104,13 +104,13 @@ body {
   width: 100%;
   height: 0.8vh;
   margin-bottom: 0.8vh;
-  border-radius: 5px; /* Coins arrondis */
-  background-color: var(--third-color); /* Couleur orange */
+  border-radius: 5px;
+  background-color: var(--third-color); 
 }
 
 /* Menu burger ouvert */
 #navBar_menuBurger.open {
-  transform: none; /* Position initiale visible */
+  transform: none; 
 }
 
 /* Transition de l'icône burger vers une croix */
@@ -129,7 +129,7 @@ body {
   transform: rotate(-45deg);
 }
 #navBar_menuBurger_icon.open span:nth-child(2) {
-  width: 0; /* Masque la barre centrale */
+  width: 0;
   opacity: 0;
 }
 
@@ -140,7 +140,7 @@ body {
 /* Section de la barre de scroll */
 .scroll-bar {
   padding-top: 2rem;
-  background-color: var(--secondary-color); /* Fond noir */
+  background-color: var(--secondary-color);
 }
 
 /* Conteneur masquant les éléments défilants */
@@ -149,7 +149,7 @@ body {
   height: 25vh;
   margin: auto;
   position: relative;
-  overflow: hidden; /* Masque les éléments hors cadre */
+  overflow: hidden;
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -174,13 +174,13 @@ body {
 /* Propriétés des items défilants */
 .itemLeft,
 .itemRight {
-  width: 200px;
+  width: 15%;
   height: 150px;
   border-radius: 1em;
   background-color: var(--third-color);
   text-align: center;
   position: absolute;
-  animation: scroll 30s linear infinite; /* Animation infinie */
+  animation: scroll 30s linear infinite; 
   animation-delay: calc(30s / 6 * var(--i) * -1); /* Décalage entre items */
 }
 
@@ -215,7 +215,7 @@ h1 {
   font-size: 2rem;
   text-align: center;
   margin: 1rem 0 2rem 0;
-  color: var(--third-color); /* Couleur orange */
+  color: var(--third-color);
 }
 .presentation-text {
   text-align: justify;

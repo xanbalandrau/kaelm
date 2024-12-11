@@ -17,8 +17,8 @@ class Lightbox {
     // Ajouter un événement de clic sur chaque lien
     links.forEach((links) => {
       links.addEventListener("click", (e) => {
-        e.preventDefault(); // Empêche le comportement par défaut du lien
-        new Lightbox(e.currentTarget.getAttribute("href"), galerie); // Crée une nouvelle instance de la Lightbox
+        e.preventDefault();
+        new Lightbox(e.currentTarget.getAttribute("href"), galerie);
       });
     });
   }
@@ -26,8 +26,8 @@ class Lightbox {
   // Constructeur : initialise une instance de la lightbox avec l'URL et la galerie
   constructor(url, galerie) {
     this.element = this.buildDOM(url); // Crée l'élément HTML de la lightbox
-    this.galerie = galerie; // Galerie des chemins des images
-    this.url = url; // URL actuelle de l'image
+    this.galerie = galerie;
+    this.url = url; 
     this.onKeyUp = this.onKeyUp.bind(this); // Lie la méthode au contexte de l'instance
     document.body.appendChild(this.element); // Ajoute la lightbox au DOM
     document.addEventListener("keyup", this.onKeyUp); // Ajoute un écouteur pour les touches du clavier
@@ -35,9 +35,9 @@ class Lightbox {
 
   // Charge une nouvelle image dans la lightbox
   loadImage(url) {
-    const image = new Image(); // Crée un nouvel élément <img>
-    const container = this.element.querySelector(".lightbox_container"); // Sélectionne le conteneur de l'image
-    container.innerHTML = ""; // Vide le conteneur
+    const image = new Image(); 
+    const container = this.element.querySelector(".lightbox_container"); 
+    container.innerHTML = "";
     image.onload = () => {
       container.appendChild(image); // Ajoute l'image au conteneur une fois chargée
       this.url = url; // Met à jour l'URL actuelle
@@ -48,22 +48,22 @@ class Lightbox {
   // Gestion des interactions clavier
   onKeyUp(e) {
     if (e.key === "Escape") {
-      this.close(e); // Ferme la lightbox si "Escape" est pressé
+      this.close(e); 
     } else if (e.key === "ArrowLeft") {
-      this.prev(e); // Passe à l'image précédente si "Flèche gauche" est pressée
+      this.prev(e); 
     } else if (e.key === "ArrowRight") {
-      this.next(e); // Passe à l'image suivante si "Flèche droite" est pressée
+      this.next(e);
     }
   }
 
   // Ferme la lightbox
   close(e) {
     e.preventDefault();
-    this.element.classList.add("close"); // Ajoute une classe pour l'animation de fermeture
+    this.element.classList.add("close");
     window.setTimeout(() => {
-      this.element.parentElement.removeChild(this.element); // Retire l'élément du DOM après l'animation
-    }, 500); // Temps de délai correspondant à l'animation CSS
-    document.removeEventListener("keyup", this.onKeyUp); // Supprime l'écouteur d'événements clavier
+      this.element.parentElement.removeChild(this.element); 
+    }, 500); 
+    document.removeEventListener("keyup", this.onKeyUp);
   }
 
   // Passe à l'image suivante
@@ -71,9 +71,9 @@ class Lightbox {
     e.preventDefault();
     let i = this.galerie.findIndex((image) => image === this.url); // Trouve l'index de l'image actuelle
     if (i === this.galerie.length - 1) {
-      i = -1; // Revient au début si on est à la dernière image
+      i = -1;
     }
-    this.loadImage(this.galerie[i + 1]); // Charge l'image suivante
+    this.loadImage(this.galerie[i + 1]);
   }
 
   // Passe à l'image précédente
@@ -81,15 +81,15 @@ class Lightbox {
     e.preventDefault();
     let i = this.galerie.findIndex((galerie) => galerie === this.url); // Trouve l'index de l'image actuelle
     if (i === 0) {
-      i = this.galerie.length; // Revient à la fin si on est à la première image
+      i = this.galerie.length;
     }
-    this.loadImage(this.galerie[i - 1]); // Charge l'image précédente
+    this.loadImage(this.galerie[i - 1]);
   }
 
   // Construit et retourne l'élément HTML de la lightbox
   buildDOM(url) {
-    const dom = document.createElement("div"); // Crée un élément <div>
-    dom.classList.add("lightbox"); // Ajoute une classe "lightbox"
+    const dom = document.createElement("div"); 
+    dom.classList.add("lightbox");
     dom.innerHTML = `
       <button class="lightbox_close">
         <i class="fa fa-times"></i>
@@ -109,13 +109,13 @@ class Lightbox {
     // Ajoute des événements aux boutons
     dom
       .querySelector(".lightbox_close")
-      .addEventListener("click", this.close.bind(this)); // Bouton "Fermer"
+      .addEventListener("click", this.close.bind(this)); 
     dom
       .querySelector(".lightbox_next")
-      .addEventListener("click", this.next.bind(this)); // Bouton "Suivant"
+      .addEventListener("click", this.next.bind(this));
     dom
       .querySelector(".lightbox_prev")
-      .addEventListener("click", this.prev.bind(this)); // Bouton "Précédent"
+      .addEventListener("click", this.prev.bind(this));
     return dom; // Retourne l'élément construit
   }
 }
