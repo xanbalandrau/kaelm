@@ -10,9 +10,9 @@
 /* Déclaration des variables pour les couleurs et le fond de la page */
 body {
   --primary-color: #ffffff;
-  --secondary-color: #000000; 
-  --third-color: #ff4500; 
-  background: linear-gradient(125deg, #ffe9e2, #fff0ea); 
+  --secondary-color: #000000;
+  --third-color: #ff4500;
+  background: linear-gradient(125deg, #ffe9e2, #fff0ea);
 }
 
 /* *************** Menu Burger *************** */
@@ -23,21 +23,21 @@ body {
   top: 10px;
   right: 10px;
   border-radius: 50%;
-  z-index: 100; 
+  z-index: 100;
   width: 5vw;
   height: 5vw;
-  background-color: var(--secondary-color); 
+  background-color: var(--secondary-color);
 }
 
 /* Animation du bouton au survol */
 #navBar:hover {
   scale: 1.06;
-  transition: 0.3s ease; 
+  transition: 0.3s ease;
 }
 
 /* Animation quand la souris quitte */
 #navBar:not(:hover) {
-  scale: 1; 
+  scale: 1;
   transition: 0.3s ease;
 }
 
@@ -53,26 +53,26 @@ body {
 /* Fenêtre du menu burger */
 #navBar_menuBurger ul {
   display: flex;
-  flex-direction: column; 
-  list-style-type: none; 
+  flex-direction: column;
+  list-style-type: none;
   position: absolute;
   top: 0;
   right: 0;
   width: 30vw;
-  height: 100vh; 
-  background-color: var(--third-color); 
+  height: 100vh;
+  background-color: var(--third-color);
 }
 
 /* Liens du menu burger */
 #navBar_menuBurger li {
-  margin: 15vh 0 0 5vw; 
+  margin: 15vh 0 0 5vw;
 }
 #navBar_menuBurger a {
   font-size: 2rem;
-  font-weight: 700; 
-  text-decoration-line: none; 
+  font-weight: 700;
+  text-decoration-line: none;
   color: white;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Conteneur global du menu burger (masqué par défaut) */
@@ -84,7 +84,7 @@ body {
   width: 100vw;
   height: 100vh;
   transform: translate(200%, 0);
-  transition: transform 0.5s ease-out; 
+  transition: transform 0.5s ease-out;
 }
 
 /* Icône du burger */
@@ -94,7 +94,7 @@ body {
   width: 5vh;
   margin: 1rem 1rem 0 0;
   user-select: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 /* Barres du menu burger */
@@ -105,12 +105,12 @@ body {
   height: 0.8vh;
   margin-bottom: 0.8vh;
   border-radius: 5px;
-  background-color: var(--third-color); 
+  background-color: var(--third-color);
 }
 
 /* Menu burger ouvert */
 #navBar_menuBurger.open {
-  transform: none; 
+  transform: none;
 }
 
 /* Transition de l'icône burger vers une croix */
@@ -180,7 +180,7 @@ body {
   background-color: var(--third-color);
   text-align: center;
   position: absolute;
-  animation: scroll 30s linear infinite; 
+  animation: scroll 30s linear infinite;
   animation-delay: calc(30s / 6 * var(--i) * -1); /* Décalage entre items */
 }
 
@@ -419,13 +419,18 @@ form button {
   #navBar {
     top: 10px;
     right: 10px;
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
   }
   /* icone du burger */
   #navBar_menuBurger_icon {
-    width: 4vh;
-    margin: 2.8rem 1.2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+    width: 5vh;
+    margin: auto;
   }
   /* pour changer l'icone burger en icone croix */
   #navBar_menuBurger_icon.open span {
@@ -574,8 +579,8 @@ form button {
   #navBar {
     top: 10px;
     right: 10px;
-    width: 15vw;
-    height: 15vw;
+    width: 50px;
+    height: 50px;
   }
   /* fenetre du menu bruger */
   #navBar_menuBurger ul {
@@ -583,8 +588,12 @@ form button {
   }
   /* icone du burger */
   #navBar_menuBurger_icon {
+    height: 5vw;
     width: 3vh;
-    margin: 1rem 1rem 0 0;
+    margin:auto;
+  }
+  #navBar_menuBurger_icon span{
+    height: 0.5vh;
   }
   /* pour changer l'icone burger en icone croix */
   #navBar_menuBurger_icon.open span {
