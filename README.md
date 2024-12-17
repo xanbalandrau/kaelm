@@ -15,3 +15,4 @@ Technologies utilisées: HTML, CSS, JavaScript.
 • Validation du formulaire en JavaScript.
 Figma : https://www.figma.com/design/xHB666W6WU5hzfSw1I61Cj/Untitled?node-id=0-1&t=6FKpCA6ZleFMaYds-1
 Diapo :https://www.canva.com/design/DAGYtDS29M8/tjkMzwGa3b7j76LxEmV67g/edit?utm_content=DAGYtDS29M8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+vercel :https://kaelm-4hjdqyhw9-xans-projects-781c6f24.vercel.app
