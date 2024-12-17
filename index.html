@@ -7,64 +7,66 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Kaëlm Design</title>
 
-     <script src="/tarteaucitron/tarteaucitron.js"></script>
+    <script src="/tarteaucitron/tarteaucitron.js"></script>
 
-        <script type="text/javascript">
-        tarteaucitron.init({
-    	  "privacyUrl": "", /* Privacy policy url */
-          "bodyPosition": "bottom", /* or top to bring it as first element for accessibility */
+    <script type="text/javascript">
+      tarteaucitron.init({
+        privacyUrl: "" /* Privacy policy url */,
+        bodyPosition:
+          "bottom" /* or top to bring it as first element for accessibility */,
 
-    	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
-    	  "cookieName": "tarteaucitron", /* Cookie name */
-    
-    	  "orientation": "middle", /* Banner position (top - bottom) */
-       
-          "groupServices": false, /* Group services by category */
-          "showDetailsOnClick": true, /* Click to expand the description */
-          "serviceDefaultState": "wait", /* Default state (true - wait - false) */
-                           
-    	  "showAlertSmall": false, /* Show the small banner on bottom right */
-    	  "cookieslist": false, /* Show the cookie list */
-                           
-          "closePopup": false, /* Show a close X on the banner */
+        hashtag: "#tarteaucitron" /* Open the panel with this hashtag */,
+        cookieName: "tarteaucitron" /* Cookie name */,
 
-          "showIcon": true, /* Show cookie icon to manage cookies */
-          //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
-          "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
+        orientation: "middle" /* Banner position (top - bottom) */,
 
-    	  "adblocker": false, /* Show a Warning if an adblocker is detected */
-                           
-          "DenyAllCta" : true, /* Show the deny all button */
-          "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
-          "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
-          "alwaysNeedConsent": false, /* Ask the consent for "Privacy by design" services */
-                           
-    	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+        groupServices: false /* Group services by category */,
+        showDetailsOnClick: true /* Click to expand the description */,
+        serviceDefaultState: "wait" /* Default state (true - wait - false) */,
 
-    	  "removeCredit": false, /* Remove credit link */
-    	  "moreInfoLink": true, /* Show more info link */
+        showAlertSmall: false /* Show the small banner on bottom right */,
+        cookieslist: false /* Show the cookie list */,
 
-          "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
-          "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+        closePopup: false /* Show a close X on the banner */,
 
-    	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
-                          
-          "readmoreLink": "", /* Change the default readmore link */
+        showIcon: true /* Show cookie icon to manage cookies */,
+        //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+        iconPosition:
+          "BottomRight" /* BottomRight, BottomLeft, TopRight and TopLeft */,
 
-          "mandatory": true, /* Show a message about mandatory cookies */
-          "mandatoryCta": true, /* Show the disabled accept button when mandatory on */
-    
-          //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
-          
-          "googleConsentMode": true, /* Enable Google Consent Mode v2 for Google ads and GA4 */
-          
-          "partnersList": false /* Show the number of partners on the popup/middle banner */
-        });
-        </script>
-         <script type="text/javascript">
-        tarteaucitron.user.recaptchaapi = 'XXXXX';
-        (tarteaucitron.job = tarteaucitron.job || []).push('recaptcha');
-        </script>
+        adblocker: false /* Show a Warning if an adblocker is detected */,
+
+        DenyAllCta: true /* Show the deny all button */,
+        AcceptAllCta: true /* Show the accept all button when highPrivacy on */,
+        highPrivacy: true /* HIGHLY RECOMMANDED Disable auto consent */,
+        alwaysNeedConsent: false /* Ask the consent for "Privacy by design" services */,
+
+        handleBrowserDNTRequest: false /* If Do Not Track == 1, disallow all */,
+
+        removeCredit: false /* Remove credit link */,
+        moreInfoLink: true /* Show more info link */,
+
+        useExternalCss: false /* If false, the tarteaucitron.css file will be loaded */,
+        useExternalJs: false /* If false, the tarteaucitron.js file will be loaded */,
+
+        //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+        readmoreLink: "" /* Change the default readmore link */,
+
+        mandatory: true /* Show a message about mandatory cookies */,
+        mandatoryCta: true /* Show the disabled accept button when mandatory on */,
+
+        //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
+
+        googleConsentMode: true /* Enable Google Consent Mode v2 for Google ads and GA4 */,
+
+        partnersList: false /* Show the number of partners on the popup/middle banner */,
+      });
+    </script>
+    <script type="text/javascript">
+      tarteaucitron.user.recaptchaapi = "XXXXX";
+      (tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");
+    </script>
   </head>
   <body>
     <header id="navBar">
@@ -81,6 +83,7 @@
           <span></span>
         </a>
         <nav role="navigation" id="navBar_menuBurger">
+          <div class="fermer" id="fermer"></div>
           <ul>
             <li>
               <a href="#"><small>1.</small> Accueil</a>
@@ -98,125 +101,127 @@
       </div>
     </header>
     <!-- Scroll bar -->
-    <section class="scroll-bar">
-      <div class="wrapper">
-        <div class="itemLeft" style="--i: 0">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-17.jpg"
-            alt="La Joconde en rond"
-          />
+    <main>
+      <section class="scroll-bar">
+        <div class="wrapper">
+          <div class="itemLeft" style="--i: 0">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-17.jpg"
+              alt="La Joconde en rond"
+            />
+          </div>
+          <div class="itemLeft" style="--i: 1">
+            <img src="./asset/img/link kalm.png" alt="link rond" />
+          </div>
+          <div class="itemLeft" style="--i: 2">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G98.jpg"
+              alt="harry potter rond"
+            />
+          </div>
+          <div class="itemLeft" style="--i: 3">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-DD.jpeg"
+              alt="La reine Élisabeth II et ses corgis rond"
+            />
+          </div>
+          <div class="itemLeft" style="--i: 4">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-0.jpg"
+              alt="Les Simpson rond"
+            />
+          </div>
+          <div class="itemLeft" style="--i: 5">
+            <img
+              src="./asset/img/sign-ronds-personnages-oeuvres-celebres-HG2.jpg"
+              alt="Nosferapto rond"
+            />
+          </div>
         </div>
-        <div class="itemLeft" style="--i: 1">
-          <img src="./asset/img/link kalm.png" alt="link rond" />
-        </div>
-        <div class="itemLeft" style="--i: 2">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G98.jpg"
-            alt="harry potter rond"
-          />
-        </div>
-        <div class="itemLeft" style="--i: 3">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-DD.jpeg"
-            alt="La reine Élisabeth II et ses corgis rond"
-          />
-        </div>
-        <div class="itemLeft" style="--i: 4">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-0.jpg"
-            alt="Les Simpson rond"
-          />
-        </div>
-        <div class="itemLeft" style="--i: 5">
-          <img
-            src="./asset/img/sign-ronds-personnages-oeuvres-celebres-HG2.jpg"
-            alt="Nosferapto rond"
-          />
-        </div>
-      </div>
 
-      <div class="wrapper">
-        <div class="itemRight" style="--i: 0">
-          <img src="./asset/img/hulk.png" alt="hulk rond" />
+        <div class="wrapper">
+          <div class="itemRight" style="--i: 0">
+            <img src="./asset/img/hulk.png" alt="hulk rond" />
+          </div>
+          <div class="itemRight" style="--i: 1">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-13.jpg"
+              alt="La Jeune Fille à la perle rond"
+            />
+          </div>
+          <div class="itemRight" style="--i: 2">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-11.jpg"
+              alt="Dracofeu rond"
+            />
+          </div>
+          <div class="itemRight" style="--i: 3">
+            <img src="/asset/img/katarina kalm.png" alt="katarina rond" />
+          </div>
+          <div class="itemRight" style="--i: 4">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-7.jpg"
+              alt="garnica rond"
+            />
+          </div>
+          <div class="itemRight" style="--i: 5">
+            <img
+              src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G87.jpg"
+              alt="hermione rond"
+            />
+          </div>
         </div>
-        <div class="itemRight" style="--i: 1">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-13.jpg"
-            alt="La Jeune Fille à la perle rond"
-          />
-        </div>
-        <div class="itemRight" style="--i: 2">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-11.jpg"
-            alt="Dracofeu rond"
-          />
-        </div>
-        <div class="itemRight" style="--i: 3">
-          <img src="/asset/img/katarina kalm.png" alt="katarina rond" />
-        </div>
-        <div class="itemRight" style="--i: 4">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-7.jpg"
-            alt="garnica rond"
-          />
-        </div>
-        <div class="itemRight" style="--i: 5">
-          <img
-            src="./asset/img/kalm-design-ronds-personnages-oeuvres-celebres-G87.jpg"
-            alt="hermione rond"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="presentation">
-      <div class="presentation-text">
-        <h1>Kaëlem Design</h1>
-        <p>
-          Bienvenue sur le site de KAELEM DESIGN, je suis un graphiste français
-          passionné par l’art et les formes géométriques. Mon univers créatif
-          repose sur une idée simple mais audacieuse : réinventer des œuvres
-          iconiques et des personnages célèbres uniquement à travers des
-          cercles.
-        </p>
+      <section class="presentation">
+        <div class="presentation-text">
+          <h1>Kaëlem Design</h1>
+          <p>
+            Bienvenue sur le site de KAELEM DESIGN, je suis un graphiste
+            français passionné par l’art et les formes géométriques. Mon univers
+            créatif repose sur une idée simple mais audacieuse : réinventer des
+            œuvres iconiques et des personnages célèbres uniquement à travers
+            des cercles.
+          </p>
+          <br />
+          <p>
+            Sur mon compte Instagram, où je partage mes créations avec près de
+            1000 abonnés, vous découvrirez des réinterprétations uniques de
+            chefs-d’œuvre comme La Joconde ou La Jeune Fille à la Perle. Chaque
+            dessin est un véritable jeu de construction, où je m’efforce de
+            capturer l’essence de l’original tout en lui donnant une touche
+            moderne et ludique grâce à mes "coup de crayons circulaires".
+          </p>
+          <br />
+          <p>
+            Ma passion ne s’arrête pas là : étant un grand fan de Pokémon, j’ai
+            également créé une série complète des créatures de cet univers,
+            toujours dans ce style rond et minimaliste. Le résultat ? Des œuvres
+            graphiques épurées mais immédiatement reconnaissables, qui plaisent
+            autant aux amateurs d’art qu’aux fans de pop culture.
+          </p>
+          <br />
+          <p>
+            Si mes créations vous parlent, sachez que je propose aussi des
+            impressions à la vente pour que vous puissiez les intégrer à votre
+            propre univers. Vous pouvez retrouver l’ensemble de mon travail et
+            suivre mes projets sur Instagram. J’espère que mon approche vous
+            séduira autant que j’ai pris plaisir à la développer !
+          </p>
+        </div>
+        <aside>
+          <img src="./asset/img/logo kalm.png" alt="logo de Kaelm Design" />
+        </aside>
+      </section>
+      <form action="?" method="POST">
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdazZcqAAAAAOlsD-yJY-bAumBpGQla4lMEa3Hs"
+        ></div>
         <br />
-        <p>
-          Sur mon compte Instagram, où je partage mes créations avec près de
-          1000 abonnés, vous découvrirez des réinterprétations uniques de
-          chefs-d’œuvre comme La Joconde ou La Jeune Fille à la Perle. Chaque
-          dessin est un véritable jeu de construction, où je m’efforce de
-          capturer l’essence de l’original tout en lui donnant une touche
-          moderne et ludique grâce à mes "coup de crayons circulaires".
-        </p>
-        <br />
-        <p>
-          Ma passion ne s’arrête pas là : étant un grand fan de Pokémon, j’ai
-          également créé une série complète des créatures de cet univers,
-          toujours dans ce style rond et minimaliste. Le résultat ? Des œuvres
-          graphiques épurées mais immédiatement reconnaissables, qui plaisent
-          autant aux amateurs d’art qu’aux fans de pop culture.
-        </p>
-        <br />
-        <p>
-          Si mes créations vous parlent, sachez que je propose aussi des
-          impressions à la vente pour que vous puissiez les intégrer à votre
-          propre univers. Vous pouvez retrouver l’ensemble de mon travail et
-          suivre mes projets sur Instagram. J’espère que mon approche vous
-          séduira autant que j’ai pris plaisir à la développer !
-        </p>
-      </div>
-      <aside>
-        <img src="./asset/img/logo kalm.png" alt="logo de Kaelm Design" />
-      </aside>
-    </section>
-    <form action="?" method="POST">
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdazZcqAAAAAOlsD-yJY-bAumBpGQla4lMEa3Hs"
-      ></div>
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
     <footer>
       <div class="share">
         <button
